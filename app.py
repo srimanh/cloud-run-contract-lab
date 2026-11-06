@@ -2,8 +2,8 @@ import json
 import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-HOST = "127.0.0.1"
-PORT = 8080
+HOST = "0.0.0.0"
+PORT = int(os.environ.get("PORT", "8080"))
 
 
 class Handler(BaseHTTPRequestHandler):
